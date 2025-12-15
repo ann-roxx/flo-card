@@ -1,0 +1,40 @@
+body{
+  font-family: "Montserrat", sans-serif ;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #515076;
+  margin: 0;
+}
+.product-list{
+  list-style: 0;
+  margin: 0;
+  padding: 0;
+}
+.label-text{
+  color: #A5A3B9;
+  font-size: 12px;
+  line-height: 24px;
+}
+.name{
+  font-size: 20px;
+  line-height: 27px;
+}
+.title{
+  font-size: 70px;
+  line-height: 78px;
+  text-align: center;
+ }
+ .main-text{
+  line-height: 18px;
+  font-size: 13px;
+ }
+ .price{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+ }
+ .money{
+  font-size: 20px;
+  line-height: 24px;
+ }
