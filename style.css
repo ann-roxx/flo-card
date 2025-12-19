@@ -86,20 +86,20 @@ body {
   margin-bottom: 5px;
  }
 
- .price-label {
+ .price-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
  }
 
- .price {
+ .price-label {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   display: inline-block;
  }
 
- .money {
+ .price {
   font-size: 20px;
   line-height: 24px;
   display: inline-block;
