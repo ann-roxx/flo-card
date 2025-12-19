@@ -1,5 +1,5 @@
 body {
-  font-family: "Montserrat", sans-serif ;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -7,19 +7,48 @@ body {
   margin: 0;
 }
 
+.background-img {
+  background-image: url("dandeon_background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 697px;
+  top: -0px;
+  left: 85px;
+}
+
+.style-card {
+  background-color: #5150761A;
+  width: 340px;
+  padding: 25px;
+  margin: 45px;
+}
+
+.img-form {
+  display: block;
+  width: 290px;
+  padding: 25px;
+}
+
 .product-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
-.label-text {
+.product-category {
   color: #A5A3B9;
   font-size: 12px;
   line-height: 24px;
+  text-transform: uppercase;
 }
 
-.name {
+.product-name {
   font-size: 20px;
   line-height: 27px;
 }
@@ -30,18 +59,48 @@ body {
   text-align: center;
  }
 
- .main-text {
+.compound-label {
+  display: block;
   line-height: 18px;
   font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.description {
+  display: block;
+  line-height: 18px;
+  font-size: 13px;
+  margin-bottom: 15px;
+ }
+
+.compound {
+  display: block;
+  line-height: 18px;
+  font-size: 13px;
+  margin-bottom: 25px;
+  list-style-position: inside;
+  padding: 0;
+ }
+
+ .properties li {
+  margin-bottom: 5px;
+ }
+
+ .price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .price-label {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  display: inline-block;
  }
 
  .price {
   font-size: 20px;
   line-height: 24px;
-  font-weight: 700;
- }
-
- .money {
-  font-size: 20px;
-  line-height: 24px;
+  display: inline-block;
  }
