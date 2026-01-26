@@ -1,20 +1,20 @@
+//Покраска всех карточек
+
 const productCards = document.querySelectorAll('.style-card');
-const changeAllCardColorButton= document.querySelector('#change-all-card-color-button');
+const AllCardColorButton= document.querySelector('#change-all-card-color-button');
 const blueColorHash = '#30eed5';
 const greenColorHash = '#4ec40a';
 
-//Покраска всех карточек
-
-changeAllCardColorButton.addEventListener('click', () => {
+AllCardColorButton.addEventListener('click', () => {
   productCards.forEach((card) =>card.style.background = blueColorHash);
 })
 
 //Покраска первой карточки
 
 const firstProductCard = document.querySelector('.style-card');
-const changeFirstCardColorButton= document.querySelector('#change-first-card-color-button');
+const FirstCardColorButton= document.querySelector('#change-first-card-color-button');
 
-changeFirstCardColorButton.addEventListener('click', () => {
+FirstCardColorButton.addEventListener('click', () => {
   firstProductCard.style.backgroundColor = greenColorHash;
 })
 
@@ -37,9 +37,9 @@ function openGoogle() {
 
 // Окно для консоли
 
-const outputLogButton = document.querySelector('#output-console-log');
+const outputLogButton = document.querySelector('#output-console-log')
 
-outputLogButton-addEventListener('click', () => outputConsoleLog ('ДЗ №4'))
+outputLogButton.addEventListener('click', () => outputConsoleLog ('ДЗ №4'));
 
 function outputConsoleLog(massage) {
   alert(massage)
@@ -51,13 +51,13 @@ function outputConsoleLog(massage) {
 const mainTitleOutputLog = document.querySelector('.title')
 
 mainTitleOutputLog.addEventListener('mouseover', function () {
-  console.log(maintitle.textContent);
+  console.log(mainTitleOutputLog.textContent);
 })
 
 // Двухцветная кнопка
 
-const changeColorButton = document.querySelector ('#color-toggle-button')
+const doubleColorButton = document.querySelector ('#color-toggle-button')
 
-changeColorButton.addEventListener('click', function () {
-  changeColorButton.classList.toggle('color-toggle-button');
+doubleColorButton.addEventListener('click', function () {
+  doubleColorButton.classList.toggle('color-button--switch');
 })

@@ -98,7 +98,18 @@
   display: inline-block;
 }
 
-.color-toggle-button {
+.button-container{
+  display: flex;
+  justify-content: space-between;
+  height: 42px;
+}
+
+.color-button {
   background-color: aquamarine;
-  color: rgb(54, 7, 48);
+  color: black;
+}
+
+.color-button--switch {
+  background-color: rgb(248, 102, 248);
+  color: black;
 }
