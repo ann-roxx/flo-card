@@ -1,7 +1,7 @@
 //Покраска всех карточек
 
 const productCards = document.querySelectorAll('.style-card');
-const AllCardColorButton= document.querySelector('#change-all-card-color-button');
+const allCardColorButton= document.querySelector('#all-cards-color-button');
 const blueColorHash = '#30eed5';
 const greenColorHash = '#4ec40a';
 
@@ -12,15 +12,15 @@ AllCardColorButton.addEventListener('click', () => {
 //Покраска первой карточки
 
 const firstProductCard = document.querySelector('.style-card');
-const FirstCardColorButton= document.querySelector('#change-first-card-color-button');
+const firstCardColorButton= document.querySelector('#first-card-color-button');
 
-FirstCardColorButton.addEventListener('click', () => {
+firstCardColorButton.addEventListener('click', () => {
   firstProductCard.style.backgroundColor = greenColorHash;
 })
 
 //Открыть Google
 
-const openGoogleButton = document.querySelector('#open-google-button');
+const openGoogleButton = document.querySelector('#google-button');
 
 openGoogleButton.addEventListener('click', openGoogle);
 
@@ -37,7 +37,7 @@ function openGoogle() {
 
 // Окно для консоли
 
-const outputLogButton = document.querySelector('#output-console-log')
+const outputLogButton = document.querySelector('#console-log-option')
 
 outputLogButton.addEventListener('click', () => outputConsoleLog ('ДЗ №4'));
 
