@@ -30,8 +30,8 @@ console.log(autoPassport.owner.name);
 // 5.Создать функию "проверка максимальной скорости"
 
 function addMaxSpeed(autoPassport) {
-  if (!autoPassport.hasOwnProperty("максимальная скорость")) {
-    autoPassport["максимальная скорость"] = 210;
+  if (!autoPassport.hasOwnProperty("maxSpeed")) {
+    autoPassport["maxSpeed"] = 210;
     console.log(autoPassport);
   }
 }
@@ -41,8 +41,7 @@ console.log("Добавлена MaxSpeed");
 // 6.Создать функцию, которая выводит обьект и свойство из нее
 
 function showProperty(object, property) {
-  const value = object[property];
-  console.log(value);
+  console.log(object[property]);
 }
 
 showProperty(autoPassport, "model");
@@ -82,7 +81,7 @@ const books = [
   }
 ]
 
-books.push ({
+books.push({
   name: "In my soul",
   genre: "mistery",
   year: 2001,
@@ -120,8 +119,24 @@ console.log(allBooks)
 
 //10. Cоздать массив с помощью map, добавить новое свойство isRare и сделвть проверку на true или false
 
+// первый вариант решения задачи
+
+  const seriesLimitedBooks = limitedBooks.map(function(book){
+  const newBooks = {...book};
+  if (newBooks.year <= 2000) {
+    newBooks.isRare = true
+  } else {
+    newBooks.isRare = false
+  }
+  return newBooks;
+}) 
+
+console.log(seriesLimitedBooks);
+
+// второй вариант решения задачи
+
 function addIsRare(books) {
-  return books.map (function(book) {
+  return books.map(book => {
     if (book.year > 2000) {
       book.isRare = true;
     } else {
@@ -137,93 +152,3 @@ console.log(rareBooks);
 rareBooks.forEach(function (book) {
   console.log(book.name, book.isRare);
 });
-
-//11. Тренируюсь. Можешь не проверять))) Мне было очень сложно с заданием №5 и №10
-// test #10
-const test = [
-  { name: "Boho",
-    price: 2500,
-    country: "Japan",
-    age: "25"
-  },
-  { name: "Lime",
-    price: 2300,
-    country: "China",
-    age: "25"
-  },
-  { name: "Kiki",
-    price: 3100,
-    country: "Korea",
-    age: "35"
-  }
-]
-
-console.log(test);
-
-function allIsRare(cream) {
-  return cream.map (function(cream) {
-    if (cream.age > 25) {
-      cream.isRare = true;
-    } else {
-      cream.isRare = false;
-    }
-    return cream;
-  })
-}
-
-const produktCream = allIsRare(test);
-console.log(produktCream);
-
-produktCream.forEach(function(cream) {
-  console.log(cream.age, cream.isRare);
-  })
-
-const numbers = [1, 2, 3, 4, 5, 6]
-console.log(numbers);
-
-function allIsRare(counting) {
-  return counting.map (function(counting){
-    if (counting > 4) {
-      counting = true;
-    } else {
-      counting = false;
-    }
-    return counting;
-  })
-}
-
-const cards = allIsRare(numbers)
-console.log(cards);
-
-cards.forEach(function(counting) {
-  console.log(counting, counting.isRare);
-})
-
-// test #5
-
-const dress = {
-  prise: 200,
-  color: "pink",
-  made: "USA",
-}
-
-console.log(dress);
-
-function addLenght (dress) {
-  if (!dress.hasOwnProperty ("длина платья")) {
-    dress ["длина платья"] = "120"
-    console.log (dress)
-  }
-}
-
-addLenght(dress, 120);
-
-function addType (dress) {
-  if (!dress.hasOwnProperty ("тип платья")) {
-    dress ["тип плятья"] = "midi"
-  }
-  console.log(dress)
-}
-
-addType(dress, "midi");
-
