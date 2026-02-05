@@ -29,9 +29,9 @@ console.log(autoPassport.owner.name);
 
 // 5.Создать функию "проверка максимальной скорости"
 
-function addMaxSpeed(autoPassport) {
+function addMaxSpeed(autoPassport, speed = 210) {
   if (!autoPassport.hasOwnProperty("maxSpeed")) {
-    autoPassport["maxSpeed"] = 210;
+    autoPassport.maxSpeed = 210;
     console.log(autoPassport);
   }
 }
@@ -55,25 +55,29 @@ console.log(productBag);
 //8. Создать два массива и обьеденить, добавив второй в конец
 
 const books = [
-  { name: "Train",
+  {
+    name: "Train",
     genre: "detective",
     year: 1976,
     color:"broun",
     edition: 10500
   },
-  { name: "Adriatic",
+  {
+    name: "Adriatic",
     genre: "tale",
     year: 2002,
     color:"blue",
     edition: 3200
   },
-  { name: "She",
+  {
+    name: "She",
     genre: "roman",
     year: 2023,
     color:"pink",
     edition: 30000
   },
-  { name: "Why not?",
+  {
+    name: "Why not?",
     genre: "detective",
     year: 1997,
     color:"black",
@@ -93,19 +97,22 @@ console.log(books)
 //9.Создать второй массив и обьеденить их с предыдущим
 
 const limitedBooks = [
-  { name: "Yesterday",
+  {
+    name: "Yesterday",
     genre: "documental",
     year: 1995,
     color:"blue",
     edition: 1000
   },
-  { name: "Today",
+  {
+    name: "Today",
     genre: "documental",
     year: 2015,
     color:"pink",
     edition: 1000
   },
-  { name: "Tommorow",
+  {
+    name: "Tommorow",
     genre: "documental",
     year: 2025,
     color:"black",
