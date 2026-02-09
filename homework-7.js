@@ -59,7 +59,7 @@ const bodyComments = comments.map(comment => ({
 console.log(bodyComments);
 
 
-//пока не получается, не проверяй, осталось еше 12 и 11
+//не думаю что это лучший вариант решения, пока не получается, не проверяй, осталось 12 и 11
 // 11. Вывести массив почт с помощью reduce  и с помощью map
 
 
@@ -79,3 +79,4 @@ const emailComments = comments.reduce((acc,comment) => {
   return acc
 }, []);
 console.log(emailCommentsMap);*/
+
