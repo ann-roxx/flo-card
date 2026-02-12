@@ -1,10 +1,10 @@
-//2. Создать массив от 1 дл 10 и отфильтровать начиная с 5
+//2. Создать массив от 1 до 10 и отфильтровать начиная с 5
 
-const numbers = [1,2,3,4,5,6,7,8,9,10];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 console.log(numbers);
 
-const newArray = numbers.filter ((number, index) => index >= 4);
+const newArray = numbers.filter((number) => number >= 5);
 
 console.log(newArray);
 
@@ -12,31 +12,45 @@ console.log(newArray);
 
 const snacks = ["Nuts", "Cookies", "Candies", "Crunches"];
 
-console.log();
-
 console.log(snacks.includes("Nuts"));
 
 //4. Написать функцию которая переворачивает содержимoе предыдущих двух массивов
 
-const reversedNumbers = numbers.reverse();
+function reverseNumbers(numbers) {
+  const newNumbers = [...numbers];
+  newNumbers.reverse();
+  return newNumbers;
+}
+
+const reversedNumbers = reverseNumbers(numbers);
 console.log(reversedNumbers);
 
-const reversedSnacks = snacks.reverse();
+function reverseSnacks(snacks) {
+  const newSnacks = [...snacks];
+  newSnacks.reverse();
+  return newSnacks;
+}
+
+const reversedSnacks = reverseSnacks(snacks);
 console.log(reversedSnacks);
 
 
 
 //7. Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
 
-const comComments = comments.filter(comment => comment.email.includes (".com"));
+import { comments } from "./comments.js";
+  console.log(comments); 
+
+const comComments = comments.filter(comment => comment.email.includes(".com"));
 
 console.log(comComments);
 
 //8. Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
 
-const idComments = comments.map(comment => {
-  return { ...comment, postId: comment.id <= 5 ? 2 : 1};
-})
+const idComments = comments.map(comment => ({
+  ...comment,
+  postId: comment.id <= 5 ? 2 : 1
+}));
 
 console.log(idComments);
 
@@ -44,7 +58,7 @@ console.log(idComments);
 
 const onlyIdNameComments = comments.map(comment => ({
   id: comment.id,
-  name:comment.name
+  name: comment.name
 }));
 
 console.log(onlyIdNameComments);
@@ -58,25 +72,24 @@ const bodyComments = comments.map(comment => ({
 
 console.log(bodyComments);
 
+//11. Вывести массив почт с помощью reduce
 
-//не думаю что это лучший вариант решения, пока не получается, не проверяй, осталось 12 и 11
-// 11. Вывести массив почт с помощью reduce  и с помощью map
-
-
-
-/*const emailComments = comments.reduce(function(result, comment) {
-  result [comment,email] = {
-    email: comment.email
-  }
-  return result
-})
-
-
-
-
-const emailComments = comments.reduce((acc,comment) => {
-  acc.push (comment, email);
+const emailComments = comments.reduce((acc, comment) => {
+  acc.push (comment.email);
   return acc
 }, []);
-console.log(emailCommentsMap);*/
 
+console.log(emailComments);
+
+        // и с помощью map
+
+const emailCommmentMap = comments.map(comments => (comments.email));
+
+console.log(emailCommmentMap);
+
+//12. Почитать про методы toString(), join() и перебрав массив с задания №11, привести его к строке.
+
+const emailString = emailCommmentMap.toString();
+console.log(emailString);
+
+console.log(emailCommmentMap.join("&"));
