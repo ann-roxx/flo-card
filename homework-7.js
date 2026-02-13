@@ -1,3 +1,6 @@
+import { comments } from "./comments.js";
+  console.log(comments);
+
 //2. Создать массив от 1 до 10 и отфильтровать начиная с 5
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -16,30 +19,11 @@ console.log(snacks.includes("Nuts"));
 
 //4. Написать функцию которая переворачивает содержимoе предыдущих двух массивов
 
-function reverseNumbers(numbers) {
-  const newNumbers = [...numbers];
-  newNumbers.reverse();
-  return newNumbers;
-}
-
-const reversedNumbers = reverseNumbers(numbers);
-console.log(reversedNumbers);
-
-function reverseSnacks(snacks) {
-  const newSnacks = [...snacks];
-  newSnacks.reverse();
-  return newSnacks;
-}
-
-const reversedSnacks = reverseSnacks(snacks);
-console.log(reversedSnacks);
-
-
+const reverseArray = array => [...array].reverse();
+console.log(reverseArray(numbers));
+console.log(reverseArray(snacks));
 
 //7. Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
-
-import { comments } from "./comments.js";
-  console.log(comments); 
 
 const comComments = comments.filter(comment => comment.email.includes(".com"));
 
@@ -75,7 +59,7 @@ console.log(bodyComments);
 //11. Вывести массив почт с помощью reduce
 
 const emailComments = comments.reduce((acc, comment) => {
-  acc.push (comment.email);
+  acc.push(comment.email);
   return acc
 }, []);
 
@@ -83,7 +67,7 @@ console.log(emailComments);
 
         // и с помощью map
 
-const emailCommmentMap = comments.map(comments => (comments.email));
+const emailCommmentMap = comments.map(comments => comments.email);
 
 console.log(emailCommmentMap);
 
