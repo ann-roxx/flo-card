@@ -6,30 +6,6 @@ console.log(cards);
 const productCardsTamplate = document.getElementById("cards-template");
 const cardsList = document.getElementById("cards-list");
 
-cards.forEach(card => {
-  const cardsClone = productCardsTamplate.content.cloneNode(true);
-
-  const img = cardsClone.querySelector(".img-form");
-  img.src = card.picture;
-  img.alt = card.name;
-
-  cardsClone.querySelector(".product-category").textContent = `${card.category}`;
-  cardsClone.querySelector(".product-name").textContent = `${card.name}`;
-  cardsClone.querySelector(".description").textContent = `${card.description}`;
-
-  const compoundItems = cardsClone.querySelector(".compound");
-  card.compound.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    compoundItems.appendChild(li);
-  });
-
-  cardsClone.querySelector(".price").textContent = `${card.price}`;
-  cardsList.appendChild(cardsClone);
-});
-
-console.log(cardsList);
-
 // 4. Используя метод .reduce(), получить массив объектов, где ключем является 
 // название продукта, а значением - его описание.
 
@@ -53,34 +29,32 @@ function getCardCount() {
   }
 }
 
-function renderCards(count) {
-  const template = document.getElementById("cards-template").content;
-  const list = document.getElementById("cards-list");
+function renderCards(cards) {
+  cardsList.innerHTML = "";
 
-  list.innerHTML = "";
+  cards.forEach(card => {
+  const cardsClone = productCardsTamplate.content.cloneNode(true);
 
-  for (let i = 0; i < count; i++) {
-    const cardData = cards[i];
-    const clone = template.cloneNode(true);
+  const img = cardsClone.querySelector(".img-form");
+  img.src = `${IMAGE}${card.picture}`;
+  img.alt = card.name;
 
-    clone.querySelector(".product-name").textContent = cardData.name;
-    clone.querySelector(".product-category").textContent = cardData.category;
-    clone.querySelector(".description").textContent = cardData.description;
-    clone.querySelector(".img-form").src = cardData.picture;
-    clone.querySelector(".img-form").alt = cardData.name;
-    clone.querySelector(".price").textContent = cardData.price;
+  cardsClone.querySelector(".product-category").textContent = `${card.category}`;
+  cardsClone.querySelector(".product-name").textContent = `${card.name}`;
+  cardsClone.querySelector(".description").textContent = `${card.description}`;
 
-    const compoundList = clone.querySelector(".compound");
-    compoundList.innerHTML = "";
-    cardData.compound.forEach(item => {
-      const li = document.createElement("li");
-      li.textContent = item;
-      compoundList.appendChild(li);
-    });
+  const compoundItems = cardsClone.querySelector(".compound");
+  card.compound.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    compoundItems.appendChild(li);
+  });
 
-    list.appendChild(clone);
-  }
+  cardsClone.querySelector(".price").textContent = `${card.price}`;
+  cardsList.appendChild(cardsClone);
+});
 }
-
+const IMAGE = "";
 const count = getCardCount();
-renderCards(count);
+const cardsCount = cards.slice(0, count);
+renderCards(cardsCount);
