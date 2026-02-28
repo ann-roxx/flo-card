@@ -19,7 +19,7 @@ console.log(cardsReduce);
 // 5. Cоздать 2 функции, одна возвращает количество карточек, которое нужно ввести, 
 // другая - рендерить эти карточки (принимая массив аргументом).
 
-/*function getCardCount() {
+function getCardCount() {
   let count = prompt("Сколько карточек отобразить? От 1 до 5");
   if (count >= 1 && count <= 5) {
     return parseInt(count);
@@ -57,4 +57,4 @@ function renderCards(cards) {
 const IMAGE = "";
 const count = getCardCount();
 const cardsCount = cards.slice(0, count);
-renderCards(cardsCount);*/
+renderCards(cardsCount);

@@ -4,15 +4,20 @@
 const emailData = document.querySelector(".footer_input");
 const form = document.querySelector(".footer_email_box");
 
+function getFormData(form) {
+  return Object.fromEntries(new FormData(form));
+}
+
 form.addEventListener("submit", (event) => {
   event.preventDefault()
-  if(!emailData.checkValidity()) {
-    alert("Некоректный email. Исправьте ошибку")
-    return
-  }
 
-  console.log({email: emailData.value});
-  console.log("Вы успешно авторизировались");
+  if(emailData.checkValidity()) {
+    const emailData = getFormData(form)
+    const emailObject = {email: emailData.value}
+    console.log(emailObject);
+  } else {
+    alert("Некоректный email. Исправьте ошибку")
+  }
 })
 
 // 5. Активировать модальное окно в js, виводить его на экран через кнопку 
@@ -39,51 +44,28 @@ closeBtn.addEventListener("click", () => {
 // 6. Создать форму регитсрации, к каждому инпуту подключить валидацию,
 // создать внешнюю константу user.
 
-let user;
 const formTemplate = document.querySelector(".form_template");
-const password = document.querySelector(".password");
-const passwordRepeat = document.querySelector(".password2");
-const firstName = document.querySelector(".firstname");
-const surname = document.querySelector(".surname");
-const birthday = document.querySelector(".birthday");
-const number = document.querySelector(".number");
-const emailAddress = document.querySelector(".email_address");
+let user = null;
 
 formTemplate.addEventListener("submit", (event) => {
   event.preventDefault()
 
-  if (!formTemplate.checkValidity()) {
-    alert("Пожалуйста, заполните форму корректно.")
-    return
+  if (formTemplate.checkValidity()) {
+    const userData = getFormData(formTemplate);
+
+  if (userData.password === userData.passwordRepeat) {
+    user = userData;
+    user.createdOn = new Date();
+    alert("Вы успешно зарегистрировались!")
+    console.log(user);
+
+    formTemplate.reset()
+
+  } else {
+    alert("Проверьте написание пароля.");
+    }
+  } else {
+    alert("Пожалуйста, заполните форму корректно.");
   }
-
-  if (password.value !== passwordRepeat.value) {
-    alert("Проверьте написание пароля.")
-    return
-  }
-
-  user = {
-  firstname: firstName.value,
-  surname: surname.value,
-  birthday: birthday.value,
-  number: number.value,
-  email: emailAddress.value,
-  password: password.value,
-  createdOn: new Date()
-  }
-  console.log(user)
-
-  modalWindow.classList.remove("active")
-  overlay.classList.remove("active")
-
-  console.log("Вы успешно авторизировались");
-
-  formTemplate.reset()
-})
-
-
-
-
-
-
+  })
 
