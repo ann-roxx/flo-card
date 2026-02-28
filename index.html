@@ -37,12 +37,102 @@
         </li>
       </template>
 
+    <footer class="footer">
+      <div class="footer_container">
+        <div class="footer_line">
+          <img src="line_icon.svg" alt="footer line">
+        </div>
+
+        <div class="footer_website">
+          <a href="#" class="footer_email">www.product-cards.com©all right reserve</a>
+        </div>
+
+        <div class="footer_content">
+          <div class="footer_left">
+            <span class="footer_title">Product Cards</span>
+            <p class="footer_description">У нас самые лучшие продукты для кожи!</p>
+            <div class="footer_icons">
+              <a href="#">
+              <img src="fly_icon.svg" alt="telegram icon">
+              </a>
+              <a href="#">
+              <img src="vk_icon.svg" alt="vk icon">
+              </a>
+            </div>
+          </div>
+
+          <div class="footer_middle">
+            <p class="footer_subscribe">Подпишись на наши акции:</p>
+            <form class="footer_email_box" novalidate>
+              <input class="footer_input" name="email" type="email" placeholder="Введи Email...|" required>
+              <button class="footer_btn" type="submit">Подписаться</button>
+            </form>
+            <button class="footer_enter" type="button">Регистрация*</button>
+          </div>
+
+          <nav class="footer_right">
+            <a href="#" class="footer_reference">Быстрые ссылки</a>
+            <a href="#" class="footer_contacts">Главная</a>
+            <a href="#" class="footer_contacts">Магазин</a>
+            <a href="#" class="footer_contacts">Контакты</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal modal_showed">
+      <div class="overlay"></div>
+      <div class="modal_window">
+        <button class="close_window">x</button>
+        <p class="modal_title">Заполните форму регистрации ниже:</p>
+          <form class="form_template">
+            <label class="input_label">
+              <span>Поле ввода имени:</span>
+              <input class="firstname" name="firstname" type="text" placeholder="Введите имя *латиницей" required pattern="[A-Z][a-z]+">
+            </label>
+            <label class="input_label">
+              <span>Поле ввода фамилии:</span>
+              <input class="surname" name="surname" type="text" placeholder="Введите фамилию *латиницей" required pattern="[A-Z][a-z]+">
+            </label>
+            <label class="input_label">
+              <span>Поле ввода даты рождения:</span>
+              <input class="birthday" name="birthday" type="date" required>
+            </label>
+            <label class="input_label">
+              <span>Поле ввода номера:</span>
+              <input class="number" name="number" type="tel" placeholder="Введите номер телефона *+38(0)" required>
+            </label>
+            <label class="input_label">
+              <span>Поле ввода email:</span>
+              <input class="email_address" name="email" type="email" placeholder="Введите *emailadress@gmail.com" required>
+            </label>
+            <label class="input_label">
+              <span>Поле ввода пароля:</span>
+              <input class="password" name="password" type="password" placeholder="Введите пароль *от 10 символов" required minlength="10">
+            </label>
+            <label class="input_label">
+              <span>Поле ввода пароля:</span>
+              <input class="password2" name="passwordRepeat" type="password" placeholder="Повторите пароль" required minlength="10">
+            </label>
+            <label class="checkbox_label">
+              <input name="agreement" type="checkbox" id="agreementCheckbox" required>
+              <span>Я даю согласие на обработку персональных данных.</span>
+            </label>
+            <div class="modal_btn">
+              <button class="submit" type="submit">Отправить</button>
+              <button class="reset" type="reset">Очистить форму</button>
+            </div>
+          </form>
+      </div>
+    </div>
+
   </main>
     <script src="main.js"></script>
     <script src="homework-5.js"></script>
     <script src="homework-6.js"></script>
     <script src="homework-7.js" type="module"></script>
     <script src="homework-8.js" type="module"></script>
+    <script src="homework-9.js"></script>
   </body>
 
 </html>
