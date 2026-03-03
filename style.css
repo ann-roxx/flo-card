@@ -113,3 +113,194 @@
   background-color: rgb(248, 102, 248);
   color: black;
 }
+
+.footer_container {
+  width: 1560px;
+  height: 477px;
+  display: flex;
+  justify-content: center;
+  padding: 0 84px;
+  margin: 0 auto;
+  background-color: black;
+  margin-top: 95px;
+  color: #FFFFFF;
+}
+
+.footer_line {
+  margin-top: 388px;
+  position: absolute;
+}
+
+.footer_website {
+  width: 376px;
+  margin-top: 426px;
+  position: absolute;
+}
+
+.footer_email {
+  font-weight: 400;
+  position: absolute;
+}
+
+.footer_content {
+  width: 1560px;
+  height: 218px;
+  display: inline-flex;
+  justify-content: space-between;
+  margin-top: 85px;
+  position: relative;
+}
+
+.footer_left {
+  text-transform: capitalize;
+}
+
+.footer_title {
+  width: 70px;
+  height: 43px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.footer_description {
+  width: 409px;
+  height: 56px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 27px;
+}
+
+.footer_icons {
+  width: 70px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.footer_email_box {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 447px;
+  height: 61px;
+}
+
+.footer_subscribe {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 13px 105px;
+}
+
+.footer_input {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.footer_btn {
+  box-shadow: none;
+  border: none;
+  background-color: none;
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+  width: 160px;
+  font-size: 18px;
+  font-weight: 500px;
+}
+
+.footer_enter {
+  box-shadow: none;
+  border: none;
+  background-color: rgb(127, 186, 224);
+  font-family: inherit;
+  padding: 20px;
+  margin: 0;
+  width: 160px;
+  font-size: 18px;
+}
+
+.footer_right {
+  width: 169px;
+  height: 147px;
+  margin-left: 216px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.footer_reference {
+  font-weight: 500;
+}
+
+.footer_contacts {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.modal_window {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  z-index: 1001;
+}
+.modal_window.active,
+.overlay.active  {
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.close_window {
+  float: right;
+}
+
+.modal_title {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(7, 16, 141);
+}
+
+.input_label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.firstname,
+.surname,
+.birthday,
+.number,
+.email_address,
+.password,
+.password2 {
+  width: 310px;
+  height: 23px;
+  margin-bottom: 15px;
+}
+
+.modal_btn {
+  float: right;
+}
+
+.submit {
+  background-color: rgb(255, 255, 255);
+  margin-top: 15px;
+  margin-right: 10px;
+}
