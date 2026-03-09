@@ -23,49 +23,9 @@ form.addEventListener("submit", (event) => {
 // 5. Активировать модальное окно в js, виводить его на экран через кнопку 
 // регистрация и закрывать крестиком,
 
-const enterBtn = document.querySelector(".footer_enter");
-const modalWindow = document.querySelector(".modal_window");
-const overlay = document.querySelector(".overlay");
-
-enterBtn.addEventListener("click", () => {
-  modalWindow.classList.add("active")
-  overlay.classList.add("active")
-  console.log(modalWindow);
-})
-
-const closeBtn = document.querySelector(".close_window");
-
-closeBtn.addEventListener("click", () => {
-  modalWindow.classList.remove("active")
-  overlay.classList.remove("active")
-  console.log(modalWindow);
-})
+// переписала логику этого задания в Modal.js
 
 // 6. Создать форму регитсрации, к каждому инпуту подключить валидацию,
 // создать внешнюю константу user.
 
-const formTemplate = document.querySelector(".form_template");
-let user = null;
-
-formTemplate.addEventListener("submit", (event) => {
-  event.preventDefault()
-
-  if (formTemplate.checkValidity()) {
-    const userData = getFormData(formTemplate);
-
-  if (userData.password === userData.passwordRepeat) {
-    user = userData;
-    user.createdOn = new Date();
-    alert("Вы успешно зарегистрировались!")
-    console.log(user);
-
-    formTemplate.reset()
-
-  } else {
-    alert("Проверьте написание пароля.");
-    }
-  } else {
-    alert("Пожалуйста, заполните форму корректно.");
-  }
-  })
-
+// переписала логику этого задания в Form.js

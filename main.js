@@ -5,7 +5,7 @@ const allCardColorButton= document.querySelector('#all-cards-color-button');
 const blueColorHash = '#30eed5';
 const greenColorHash = '#4ec40a';
 
-AllCardColorButton.addEventListener('click', () => {
+allCardColorButton.addEventListener('click', () => {
   productCards.forEach((card) =>card.style.background = blueColorHash);
 })
 
