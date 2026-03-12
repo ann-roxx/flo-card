@@ -1,63 +1,48 @@
-//Покраска всех карточек
+import "./Modal.js";
+import "./Form.js";
+import "./homework-4.js";
+import "./homework-5.js";
+import "./homework-6.js";
+import "./homework-7.js";
+import "./homework-8.js";
+import "./homework-9.js";
 
-const productCards = document.querySelectorAll('.style-card');
-const allCardColorButton= document.querySelector('#all-cards-color-button');
-const blueColorHash = '#30eed5';
-const greenColorHash = '#4ec40a';
+// 2. Импортировать предыдущие файлы .js в главный main.js  методом side-efect import
 
-AllCardColorButton.addEventListener('click', () => {
-  productCards.forEach((card) =>card.style.background = blueColorHash);
-})
+// 3. Cоздать функцию конструктор с помощью классов + реализовать наследовательность.
+// правило - 1 класс = 1 файл
 
-//Покраска первой карточки
+class Alco {
+  constructor(brand, type){
+  this.brand = brand;
+  this.type = type; 
+  }
 
-const firstProductCard = document.querySelector('.style-card');
-const firstCardColorButton= document.querySelector('#first-card-color-button');
-
-firstCardColorButton.addEventListener('click', () => {
-  firstProductCard.style.backgroundColor = greenColorHash;
-})
-
-//Открыть Google
-
-const openGoogleButton = document.querySelector('#google-button');
-
-openGoogleButton.addEventListener('click', openGoogle);
-
-
-function openGoogle() {
-  const answer = confirm('Вы действительно хотите открыть Google?')
-
-  if (answer === true) {
-    window.open('https://google.com');
-  } else {
-    return;
+  stock() {
+    console.log(`${this.brand}, ${this.type} in stock`)
   }
 }
 
-// Окно для консоли
+class AlcoPremium extends Alco {
+  constructor(brand, type, price) {
+    super(brand, type)
+    this.price = price;
+    }
 
-const outputLogButton = document.querySelector('#console-log-option')
+  buy() {
+    console.log(`${this.brand}, ${this.type} buy now!`)
+  }
 
-outputLogButton.addEventListener('click', () => outputConsoleLog ('ДЗ №4'));
-
-function outputConsoleLog(massage) {
-  alert(massage)
-  console.log(massage)
+  stock() {
+    super.stock()
+    console.log(`premium price = ${this.price}`)
+  }
 }
 
-// Заголовок в консоли
+const tekila = new Alco("B16", "medium")
+const vodka = new Alco("Elbrus", "strong")
+tekila.stock()
+vodka.stock()
 
-const mainTitleOutputLog = document.querySelector('.title')
-
-mainTitleOutputLog.addEventListener('mouseover', function () {
-  console.log(mainTitleOutputLog.textContent);
-})
-
-// Двухцветная кнопка
-
-const doubleColorButton = document.querySelector ('#color-toggle-button')
-
-doubleColorButton.addEventListener('click', function () {
-  doubleColorButton.classList.toggle('color-button--switch');
-})
+const visky = new AlcoPremium("Sundrello", "medium-strong", "86$")
+visky.stock()

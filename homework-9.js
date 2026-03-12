@@ -24,34 +24,23 @@ form.addEventListener("submit", (event) => {
 // регистрация и закрывать крестиком,
 
 const enterBtn = document.querySelector(".footer_enter");
-const modalWindow = document.querySelector(".modal_window");
-const overlay = document.querySelector(".overlay");
+const registerModal = new Modal("registerModal");
 
 enterBtn.addEventListener("click", () => {
-  modalWindow.classList.add("active")
-  overlay.classList.add("active")
-  console.log(modalWindow);
-})
-
-const closeBtn = document.querySelector(".close_window");
-
-closeBtn.addEventListener("click", () => {
-  modalWindow.classList.remove("active")
-  overlay.classList.remove("active")
-  console.log(modalWindow);
+  registerModal.open();
 })
 
 // 6. Создать форму регитсрации, к каждому инпуту подключить валидацию,
 // создать внешнюю константу user.
 
-const formTemplate = document.querySelector(".form_template");
+const registerForm = new Form ("registerForm")
 let user = null;
 
-formTemplate.addEventListener("submit", (event) => {
+registerForm.form.addEventListener("submit", (event) => {
   event.preventDefault()
 
-  if (formTemplate.checkValidity()) {
-    const userData = getFormData(formTemplate);
+  if (registerForm.isValid()) {
+    const userData = getAllValues(registerForm);
 
   if (userData.password === userData.passwordRepeat) {
     user = userData;
@@ -59,7 +48,7 @@ formTemplate.addEventListener("submit", (event) => {
     alert("Вы успешно зарегистрировались!")
     console.log(user);
 
-    formTemplate.reset()
+    registerForm.reset()
 
   } else {
     alert("Проверьте написание пароля.");
