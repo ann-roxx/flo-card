@@ -13,29 +13,24 @@ class Modal {
     this.overlay = this.modal.querySelector(".overlay");
     this.closeBtn = this.modal.querySelector(".close_window");
 
-    this.listenCloseButton();
+    this.handleClose = this.close.bind(this);
     }
 
     open() {
       this.modalWindow.classList.add("active");
       this.overlay.classList.add("active");
+
+      this.closeBtn.addEventListener("click", this.handleClose);
+      this.overlay.addEventListener("click", this.handleClose);
     }
 
     close() {
       this.modalWindow.classList.remove("active");
       this.overlay.classList.remove("active");
-    }
 
-    listenCloseButton() {
-      this.closeBtn.addEventListener("click", () => {
-        this.close();
-      })
-    };
+      this.closeBtn.removeEventListener("click", this.handleClose);
+      this.overlay.removeEventListener("click", this.handleClose);
+    }
   }
 
-const enterBtn = document.querySelector(".footer_enter");
-const registerModal  = new Modal("registerModal");
-
-enterBtn.addEventListener("click", () => {
-  registerModal.open();
-})
+window.Modal = Modal;

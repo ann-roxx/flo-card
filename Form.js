@@ -7,45 +7,20 @@
 class Form {
   constructor(formId) {
     this.form = document.getElementById(formId);
-    this.user = null;
-
-    this.form.addEventListener("submit", this.handleSubmit.bind(this));
   }
 
-  getFormData() {
+  getAllValues() {
     const formData = new FormData(this.form);
     return Object.fromEntries(formData.entries());
   }
 
-  checkValid() {
+  isValid() {
     return this.form.checkValidity();
   }
 
-  resetForm() {
+  reset() {
     return this.form.reset();
-  }
-
-  handleSubmit(event) {
-  event.preventDefault()
-  
-    if (this.checkValid()) {
-      const userData = this.getFormData();
-    
-    if (userData.password === userData.passwordRepeat) {
-      this.user = userData;
-      this.user.createdOn = new Date();
-
-      alert("Вы успешно зарегистрировались!")
-      console.log(this.user);
-
-      this.resetForm();
-      } else {
-      alert("Проверьте написание пароля.");
-      }
-    } else {
-    alert("Пожалуйста, заполните форму корректно.");
-   }
   }
 }
 
-const registerForm = new Form ("registerForm");
+window.Form = Form;
