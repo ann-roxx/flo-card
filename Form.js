@@ -23,4 +23,3 @@ class Form {
   }
 }
 
-window.Form = Form;
