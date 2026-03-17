@@ -6,31 +6,25 @@
 // закрывает модалку (реализовать через eventListener) и вызывать в конструкторе.
 // Используя данный класс - переписать логику задания №9.
 
-class Modal {
-  constructor(modalId) {
+export default class Modal {
+  constructor(modalId, overlay) {
     this.modal = document.getElementById(modalId);
-    this.modalWindow = this.modal.querySelector(".modal_window");
-    this.overlay = this.modal.querySelector(".overlay");
+    this.overlay = document.getElementById(overlay);
     this.closeBtn = this.modal.querySelector(".close_window");
 
     this.handleClose = this.close.bind(this);
+
+    this.closeBtn.addEventListener("click", this.handleClose);
+    this.overlay.addEventListener("click", this.handleClose);
     }
 
     open() {
-      this.modalWindow.classList.add("active");
+      this.modal.classList.add("active");
       this.overlay.classList.add("active");
-
-      this.closeBtn.addEventListener("click", this.handleClose);
-      this.overlay.addEventListener("click", this.handleClose);
     }
 
     close() {
-      this.modalWindow.classList.remove("active");
+      this.modal.classList.remove("active");
       this.overlay.classList.remove("active");
-
-      this.closeBtn.removeEventListener("click", this.handleClose);
-      this.overlay.removeEventListener("click", this.handleClose);
     }
   }
-
-

@@ -22,9 +22,9 @@ form.addEventListener("submit", (event) => {
 
 // 5. Активировать модальное окно в js, виводить его на экран через кнопку 
 // регистрация и закрывать крестиком,
-
+import Modal from "./modal.js";
 const enterBtn = document.querySelector(".footer_enter");
-const registerModal = new Modal("registerModal");
+const registerModal = new Modal("registerModal", "overlay");
 
 enterBtn.addEventListener("click", () => {
   registerModal.open();
