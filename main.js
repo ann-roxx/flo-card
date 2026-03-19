@@ -1,63 +1,21 @@
-//Покраска всех карточек
+import "./homework-4.js";
+import "./homework-5.js";
+import "./homework-6.js";
+import "./homework-7.js";
+import "./homework-8.js";
+import "./homework-9.js";
+import {Alco} from "./alco.js";
+import {AlcoPremium} from "./alcoPremium.js";
 
-const productCards = document.querySelectorAll('.style-card');
-const allCardColorButton= document.querySelector('#all-cards-color-button');
-const blueColorHash = '#30eed5';
-const greenColorHash = '#4ec40a';
+// 2. Импортировать предыдущие файлы .js в главный main.js  методом side-efect import
 
-AllCardColorButton.addEventListener('click', () => {
-  productCards.forEach((card) =>card.style.background = blueColorHash);
-})
+// 3. Cоздать функцию конструктор с помощью классов + реализовать наследовательность.
+// правило - 1 класс = 1 файл
 
-//Покраска первой карточки
+const tekila = new Alco("B16", "medium")
+const vodka = new Alco("Elbrus", "strong")
+tekila.stock()
+vodka.stock()
 
-const firstProductCard = document.querySelector('.style-card');
-const firstCardColorButton= document.querySelector('#first-card-color-button');
-
-firstCardColorButton.addEventListener('click', () => {
-  firstProductCard.style.backgroundColor = greenColorHash;
-})
-
-//Открыть Google
-
-const openGoogleButton = document.querySelector('#google-button');
-
-openGoogleButton.addEventListener('click', openGoogle);
-
-
-function openGoogle() {
-  const answer = confirm('Вы действительно хотите открыть Google?')
-
-  if (answer === true) {
-    window.open('https://google.com');
-  } else {
-    return;
-  }
-}
-
-// Окно для консоли
-
-const outputLogButton = document.querySelector('#console-log-option')
-
-outputLogButton.addEventListener('click', () => outputConsoleLog ('ДЗ №4'));
-
-function outputConsoleLog(massage) {
-  alert(massage)
-  console.log(massage)
-}
-
-// Заголовок в консоли
-
-const mainTitleOutputLog = document.querySelector('.title')
-
-mainTitleOutputLog.addEventListener('mouseover', function () {
-  console.log(mainTitleOutputLog.textContent);
-})
-
-// Двухцветная кнопка
-
-const doubleColorButton = document.querySelector ('#color-toggle-button')
-
-doubleColorButton.addEventListener('click', function () {
-  doubleColorButton.classList.toggle('color-button--switch');
-})
+const visky = new AlcoPremium("Sundrello", "medium-strong", "86$")
+visky.stock()

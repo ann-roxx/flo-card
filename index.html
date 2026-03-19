@@ -80,12 +80,13 @@
       </div>
     </footer>
 
-    <div class="modal modal_showed">
-      <div class="overlay"></div>
-      <div class="modal_window">
+    <div id="overlay" class="overlay"></div>
+
+    <div class="modal">
+      <div id="registerModal" class="modal_window">
         <button class="close_window">x</button>
         <p class="modal_title">Заполните форму регистрации ниже:</p>
-          <form class="form_template">
+          <form id="registerForm" class="form_template">
             <label class="input_label">
               <span>Поле ввода имени:</span>
               <input class="firstname" name="firstname" type="text" placeholder="Введите имя *латиницей" required pattern="[A-Z][a-z]+">
@@ -127,13 +128,7 @@
     </div>
 
   </main>
-    <script src="main.js"></script>
-    <script src="homework-5.js"></script>
-    <script src="homework-6.js"></script>
-    <script src="homework-7.js" type="module"></script>
-    <script src="homework-8.js" type="module"></script>
-    <script src="homework-9.js"></script>
+    <script type="module" src="main.js" ></script>
   </body>
 
 </html>
-
