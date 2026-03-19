@@ -1,6 +1,6 @@
 // правило "Экземпляры класса выносим в именованый файл, а классы - в главном"
 
-class Alco {
+export class Alco {
   constructor(brand, type){
   this.brand = brand;
   this.type = type; 

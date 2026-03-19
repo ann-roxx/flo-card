@@ -4,7 +4,7 @@
 // - для сброса значений формы.
 // + переписать логику задания №9
 
-export default class Form {
+export class Form {
   constructor(formId) {
     this.form = document.getElementById(formId);
   }

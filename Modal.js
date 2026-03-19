@@ -6,7 +6,7 @@
 // закрывает модалку (реализовать через eventListener) и вызывать в конструкторе.
 // Используя данный класс - переписать логику задания №9.
 
-export default class Modal {
+export class Modal {
   constructor(modalId) {
     this.modal = document.getElementById(modalId);
     this.overlay = document.getElementById("overlay");

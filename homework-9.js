@@ -1,5 +1,5 @@
-import Modal from "./modalwindow.js";
-import Form from "./formtemplate.js";
+import {Modal} from "./Modal.js";
+import {Form} from "./Form.js";
 // 4. выводить введенный пользователем email, нажимая на кнопку Подписаться, подключить валидацию,
 //  чтобы проверить, если написание адресса не верное
 
