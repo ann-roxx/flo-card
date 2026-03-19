@@ -1,3 +1,5 @@
+import Modal from "./modalwindow.js";
+import Form from "./formtemplate.js";
 // 4. выводить введенный пользователем email, нажимая на кнопку Подписаться, подключить валидацию,
 //  чтобы проверить, если написание адресса не верное
 
@@ -22,7 +24,7 @@ form.addEventListener("submit", (event) => {
 
 // 5. Активировать модальное окно в js, виводить его на экран через кнопку 
 // регистрация и закрывать крестиком,
-import Modal from "./modal.js";
+
 const enterBtn = document.querySelector(".footer_enter");
 const registerModal = new Modal("registerModal", "overlay");
 
@@ -40,7 +42,7 @@ registerForm.form.addEventListener("submit", (event) => {
   event.preventDefault()
 
   if (registerForm.isValid()) {
-    const userData = getAllValues(registerForm);
+    const userData =  registerForm.getAllValues();
 
   if (userData.password === userData.passwordRepeat) {
     user = userData;

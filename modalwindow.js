@@ -7,9 +7,9 @@
 // Используя данный класс - переписать логику задания №9.
 
 export default class Modal {
-  constructor(modalId, overlay) {
+  constructor(modalId) {
     this.modal = document.getElementById(modalId);
-    this.overlay = document.getElementById(overlay);
+    this.overlay = document.getElementById("overlay");
     this.closeBtn = this.modal.querySelector(".close_window");
 
     this.handleClose = this.close.bind(this);
