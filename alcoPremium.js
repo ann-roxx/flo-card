@@ -4,7 +4,7 @@ export class AlcoPremium extends Alco {
   constructor(brand, type, price) {
     super(brand, type)
     this.price = price;
-    }
+  }
 
   buy() {
     console.log(`${this.brand}, ${this.type} buy now!`)
