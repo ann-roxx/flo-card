@@ -12,13 +12,13 @@
 export class Drink {
   #temperature;
   constructor(name, size, price) {
-  this.name = name;
-  this.size = size;
-  this.price = price;
+    this.name = name;
+    this.size = size;
+    this.price = price;
   }
 
   getInfo() {
-    return [this.name, this.size, this.price];
+    return this.name + "," + this.size, this.price;
   }
 
   getTemperature() {

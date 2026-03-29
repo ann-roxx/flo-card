@@ -1,5 +1,5 @@
-import {Modal} from "./Modal.js";
-import {Form} from "./Form.js";
+import { Modal } from "./Modal.js";
+import { Form } from "./Form.js";
 // 4. выводить введенный пользователем email, нажимая на кнопку Подписаться, подключить валидацию,
 //  чтобы проверить, если написание адресса не верное
 
@@ -26,7 +26,7 @@ form.addEventListener("submit", (event) => {
 // регистрация и закрывать крестиком,
 
 const enterBtn = document.querySelector(".footer_enter");
-const registerModal = new Modal("registerModal", "overlay");
+const registerModal = new Modal("register-modal", "overlay");
 
 enterBtn.addEventListener("click", () => {
   registerModal.open();
@@ -35,7 +35,7 @@ enterBtn.addEventListener("click", () => {
 // 6. Создать форму регитсрации, к каждому инпуту подключить валидацию,
 // создать внешнюю константу user.
 
-const registerForm = new Form ("registerForm")
+const registerForm = new Form ("register-form")
 let user = null;
 
 registerForm.form.addEventListener("submit", (event) => {
@@ -58,5 +58,5 @@ registerForm.form.addEventListener("submit", (event) => {
   } else {
     alert("Пожалуйста, заполните форму корректно.");
   }
-  })
+})
 

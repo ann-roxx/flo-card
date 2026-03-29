@@ -13,12 +13,12 @@
 
 export class Cafe {
   constructor(name, location) {
-  this.name = name;
-  this.location = location;
+    this.name = name;
+    this.location = location;
   }
 
   getInfo() {
-    return [this.name, this.location];
+    return this.name + "," + this.location;
   }
 
   makeOrder(drink) {

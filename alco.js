@@ -2,8 +2,8 @@
 
 export class Alco {
   constructor(brand, type){
-  this.brand = brand;
-  this.type = type; 
+    this.brand = brand;
+    this.type = type; 
   }
 
   stock() {

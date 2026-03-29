@@ -83,40 +83,77 @@
     <div id="overlay" class="overlay"></div>
 
     <div class="modal">
-      <div id="registerModal" class="modal_window">
+      <div id="register-modal" class="modal_window">
         <button class="close_window">x</button>
         <p class="modal_title">Заполните форму регистрации ниже:</p>
-          <form id="registerForm" class="form_template">
+          <form id="register-form" class="form_template">
             <label class="input_label">
               <span>Поле ввода имени:</span>
-              <input class="firstname" name="firstname" type="text" placeholder="Введите имя *латиницей" required pattern="[A-Z][a-z]+">
+              <input
+                class="firstname"
+                name="firstname"
+                type="text"
+                placeholder="Введите имя *латиницей"
+                required pattern="[A-Z][a-z]+">
             </label>
             <label class="input_label">
               <span>Поле ввода фамилии:</span>
-              <input class="surname" name="surname" type="text" placeholder="Введите фамилию *латиницей" required pattern="[A-Z][a-z]+">
+              <input
+                class="surname"
+                name="surname"
+                type="text" placeholder="Введите фамилию *латиницей"
+                required pattern="[A-Z][a-z]+">
             </label>
             <label class="input_label">
               <span>Поле ввода даты рождения:</span>
-              <input class="birthday" name="birthday" type="date" required>
+              <input
+                class="birthday"
+                name="birthday"
+                type="date"
+                required>
             </label>
             <label class="input_label">
               <span>Поле ввода номера:</span>
-              <input class="number" name="number" type="tel" placeholder="Введите номер телефона *+38(0)" required>
+              <input
+                class="number"
+                name="number"
+                type="tel"
+                placeholder="Введите номер телефона *+38(0)"
+                required>
             </label>
             <label class="input_label">
               <span>Поле ввода email:</span>
-              <input class="email_address" name="email" type="email" placeholder="Введите *emailadress@gmail.com" required>
+              <input
+                class="email_address"
+                name="email"
+                type="email"
+                placeholder="Введите *emailadress@gmail.com"
+                required>
             </label>
             <label class="input_label">
               <span>Поле ввода пароля:</span>
-              <input class="password" name="password" type="password" placeholder="Введите пароль *от 10 символов" required minlength="10">
+              <input
+                class="password"
+                name="password"
+                type="password"
+                placeholder="Введите пароль *от 10 символов"
+                required minlength="10">
             </label>
             <label class="input_label">
               <span>Поле ввода пароля:</span>
-              <input class="password2" name="passwordRepeat" type="password" placeholder="Повторите пароль" required minlength="10">
+              <input
+                class="password2"
+                name="passwordRepeat"
+                type="password"
+                placeholder="Повторите пароль"
+                required minlength="10">
             </label>
             <label class="checkbox_label">
-              <input name="agreement" type="checkbox" id="agreementCheckbox" required>
+              <input
+                name="agreement"
+                type="checkbox"
+                id="agreement-checkbox"
+                required>
               <span>Я даю согласие на обработку персональных данных.</span>
             </label>
             <div class="modal_btn">

@@ -36,12 +36,12 @@ function renderCards(cards) {
   const cardsClone = productCardsTamplate.content.cloneNode(true);
 
   const img = cardsClone.querySelector(".img-form");
-  img.src = `${IMAGE}${card.picture}`;
+  img.src = `${ IMAGE }${ card.picture }`;
   img.alt = card.name;
 
-  cardsClone.querySelector(".product-category").textContent = `${card.category}`;
-  cardsClone.querySelector(".product-name").textContent = `${card.name}`;
-  cardsClone.querySelector(".description").textContent = `${card.description}`;
+  cardsClone.querySelector(".product-category").textContent = `${ card.category }`;
+  cardsClone.querySelector(".product-name").textContent = `${ card.name }`;
+  cardsClone.querySelector(".description").textContent = `${ card.description }`;
 
   const compoundItems = cardsClone.querySelector(".compound");
   card.compound.forEach(item => {
@@ -50,7 +50,7 @@ function renderCards(cards) {
     compoundItems.appendChild(li);
   });
 
-  cardsClone.querySelector(".price").textContent = `${card.price}`;
+  cardsClone.querySelector(".price").textContent = `${ card.price }`;
   cardsList.appendChild(cardsClone);
 });
 }

@@ -4,13 +4,13 @@ import "./homework-6.js";
 import "./homework-7.js";
 import "./homework-8.js";
 import "./homework-9.js";
-import {Alco} from "./alco.js";
-import {AlcoPremium} from "./alcoPremium.js";
-import {Drink} from "./drink.js";
-import {Tea} from "./drinkTea.js";
-import {HotChocolate} from "./drinkChocolate.js";
-import {Tekila} from "./drinkTekila.js";
-import {Cafe} from "./cafe.js";
+import { Alco } from "./alco.js";
+import { AlcoPremium } from "./alcoPremium.js";
+import { Drink } from "./drink.js";
+import { Tea } from "./drinkTea.js";
+import { HotChocolate } from "./drinkChocolate.js";
+import { Tekila } from "./drinkTekila.js";
+import { Cafe } from "./cafe.js";
 
 // ДЗ №10
 // 2. Импортировать предыдущие файлы .js в главный main.js  методом side-efect import

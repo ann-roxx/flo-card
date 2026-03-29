@@ -1,6 +1,6 @@
 // От класса Drink создать наследников и присвоить 
 // им дополнительные уникальные свойства.
-import {Drink} from "./drink.js";
+import { Drink } from "./drink.js";
 
 export class Tea extends Drink {
   constructor(name, size, price, type, strength, country, temperature) {

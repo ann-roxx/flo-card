@@ -1,4 +1,4 @@
-import {Alco} from "./alco.js";
+import { Alco } from "./alco.js";
 
 export class AlcoPremium extends Alco {
   constructor(brand, type, price) {
