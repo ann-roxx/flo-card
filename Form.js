@@ -5,7 +5,9 @@
 // + переписать логику задания №9
 
 export class Form {
+
   constructor(formId) {
+
     this.form = document.getElementById(formId);
   }
 

@@ -12,7 +12,9 @@
 //3. Можем получить информацию про напиток
 
 export class Cafe {
+
   constructor(name, location) {
+
     this.name = name;
     this.location = location;
   }

@@ -1,7 +1,9 @@
 import { Alco } from "./alco.js";
 
 export class AlcoPremium extends Alco {
+
   constructor(brand, type, price) {
+
     super(brand, type)
     this.price = price;
   }

@@ -7,7 +7,9 @@
 // Используя данный класс - переписать логику задания №9.
 
 export class Modal {
+
   constructor(modalId) {
+
     this.modal = document.getElementById(modalId);
     this.overlay = document.getElementById("overlay");
     this.closeBtn = this.modal.querySelector(".close_window");
