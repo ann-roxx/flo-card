@@ -43,8 +43,8 @@ buyProduct(59000);
 
 //Создать функцию
 
-function showMessage(name, massege) {
-  console.log(`Привет ${ name }, открывай свои ${ massege }!`);
+function showMessage(name, message) {
+  console.log(`Привет ${ name }, открывай свои ${ message }!`);
 }
 
 showMessage("Влад", "IT-курсы");

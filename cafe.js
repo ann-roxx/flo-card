@@ -18,7 +18,7 @@ export class Cafe {
   }
 
   getInfo() {
-    return this.name + "," + this.location;
+    return [this.name, this.location].toString();
   }
 
   makeOrder(drink) {
