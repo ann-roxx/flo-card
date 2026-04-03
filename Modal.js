@@ -9,7 +9,6 @@
 export class Modal {
 
   constructor(modalId) {
-
     this.modal = document.getElementById(modalId);
     this.overlay = document.getElementById("overlay");
     this.closeBtn = this.modal.querySelector(".close_window");
@@ -29,4 +28,5 @@ export class Modal {
       this.modal.classList.remove("active");
       this.overlay.classList.remove("active");
     }
-  }
+
+}

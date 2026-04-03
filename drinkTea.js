@@ -5,7 +5,6 @@ import { Drink } from "./drink.js";
 export class Tea extends Drink {
 
   constructor(name, size, price, type, strength, country, temperature) {
-
     super(name, size, price)
     this.type = type;
     this.strength = strength;
@@ -17,5 +16,6 @@ export class Tea extends Drink {
   getInfo() {
     return [...super.getInfo(), this.type, this.strength, this.country];
   }
+
 }
 

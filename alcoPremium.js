@@ -3,7 +3,6 @@ import { Alco } from "./alco.js";
 export class AlcoPremium extends Alco {
 
   constructor(brand, type, price) {
-
     super(brand, type)
     this.price = price;
   }
@@ -16,4 +15,5 @@ export class AlcoPremium extends Alco {
     super.stock()
     console.log(`premium price = ${this.price}`)
   }
+
 }

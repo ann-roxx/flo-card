@@ -14,7 +14,6 @@
 export class Cafe {
 
   constructor(name, location) {
-
     this.name = name;
     this.location = location;
   }
@@ -30,5 +29,6 @@ export class Cafe {
 
     return `Инфо о напитке: ${info.join(", ")}, температура при подаче: ${temp} °C, статус заказа: ${order}`
   }
+
 }
 

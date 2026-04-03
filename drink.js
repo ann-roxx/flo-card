@@ -12,9 +12,7 @@
 export class Drink {
 
   #temperature;
-
   constructor(name, size, price) {
-
     this.name = name;
     this.size = size;
     this.price = price;
@@ -40,4 +38,5 @@ export class Drink {
     const service = this.#cookDrink();
     return service + " и подан посетителю."
   }
+
 }

@@ -3,7 +3,6 @@
 export class Alco {
 
   constructor(brand, type) {
-
     this.brand = brand;
     this.type = type; 
   }
@@ -11,4 +10,5 @@ export class Alco {
   stock() {
     console.log(`${this.brand}, ${this.type} in stock`)
   }
+
 }
