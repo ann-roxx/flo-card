@@ -7,6 +7,7 @@
 // Используя данный класс - переписать логику задания №9.
 
 export class Modal {
+
   constructor(modalId) {
     this.modal = document.getElementById(modalId);
     this.overlay = document.getElementById("overlay");
@@ -27,4 +28,5 @@ export class Modal {
       this.modal.classList.remove("active");
       this.overlay.classList.remove("active");
     }
-  }
+
+}

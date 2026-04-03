@@ -128,8 +128,8 @@ console.log(allBooks)
 
 // первый вариант решения задачи
 
-  const seriesLimitedBooks = limitedBooks.map(function(book){
-  const newBooks = {...book};
+  const seriesLimitedBooks = limitedBooks.map(function(book) {
+  const newBooks = { ...book };
   if (newBooks.year <= 2000) {
     newBooks.isRare = true
   } else {
