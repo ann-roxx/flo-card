@@ -1,7 +1,7 @@
 //Создать функцию, где выводится название города и температура в консоль
 
 function discribeWeather(city, temperature) {
-  console.log(`Сейчас в ${city} температура - ${temperature} градусов по Цельсию`);
+  console.log(`Сейчас в ${ city } температура - ${ temperature } градусов по Цельсию`);
 }
 
 discribeWeather("Сплит", 25)
@@ -12,11 +12,11 @@ const SPEED_LIGHT = 299792458;
 
 function compareSpeed(speed) {
   if (speed > SPEED_LIGHT) {
-    console.log(`Сверхсветовая скорость ${speed} м/с`);
+    console.log(`Сверхсветовая скорость ${ speed } м/с`);
   } else if (speed < SPEED_LIGHT) {
-    console.log(`Субсветовая скорость ${speed} м/с`);
+    console.log(`Субсветовая скорость ${ speed } м/с`);
   } else {
-    console.log(`Скорость света ${speed} м/с`);
+    console.log(`Скорость света ${ speed } м/с`);
   }
 }
 
@@ -31,10 +31,10 @@ const price = 59600;
 
 function buyProduct(budget) {
   if (budget > price) {
-    console.log (`${product} приобретён. Спасибо за покупку!`);
+    console.log (`${ product } приобретён. Спасибо за покупку!`);
   } else {
     const difference = price - budget;
-    console.log(`Вам не хватает ${difference}, пополните баланс.`);
+    console.log(`Вам не хватает ${ difference }, пополните баланс.`);
   }
 }
 
@@ -43,8 +43,8 @@ buyProduct(59000);
 
 //Создать функцию
 
-function showMessage(name, massege) {
-  console.log(`Привет ${name}, открывай свои ${massege}!`);
+function showMessage(name, message) {
+  console.log(`Привет ${ name }, открывай свои ${ message }!`);
 }
 
 showMessage("Влад", "IT-курсы");
@@ -56,10 +56,10 @@ const followers = 10000;
 
 function countingFollowers(monetisation) {
   if (monetisation > followers) {
-    console.log (`Поздравляем, у вас ${followers} подписчиков! Ваш ${bloging} монетизирован!`);
+    console.log (`Поздравляем, у вас ${ followers } подписчиков! Ваш ${ bloging } монетизирован!`);
   } else {
     const difference = followers - monetisation;
-    console.log(`Вам не хватает ${difference} для подключения монетизации.`);
+    console.log(`Вам не хватает ${ difference } для подключения монетизации.`);
   }
 }
 
@@ -70,9 +70,9 @@ const cosmetic = "Крем";
 const age = 25;
 function pickCream(age) {
   if (age > 25) {
-    console.log(`Этот ${cosmetic} подходит для девушкек ${age}+. Отличный выбор!`);
+    console.log(`Этот ${ cosmetic } подходит для девушкек ${ age }+. Отличный выбор!`);
   } else {
-    console.log(`Этот ${cosmetic} не подходит вашему типу кожи. Ваш возраст ${age} лет.`);
+    console.log(`Этот ${ cosmetic } не подходит вашему типу кожи. Ваш возраст ${ age } лет.`);
   }
 }
 
